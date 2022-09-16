@@ -102,4 +102,41 @@ START();
 
 console.log("=========================================");
 
-console.log("a");
+// another for example
+for (let x = 0; x < 10; x++) {
+  console.log("x is: ", x);
+  for (let y = 1; y < 3; y++) {
+    console.log("y is: ", y);
+  }
+}
+
+console.log("=========================================");
+
+// aa
+
+
+console.log("=========================================");
+
+const obj = {
+  number1: 1,
+  number2: 2,
+  number3: 3,
+};
+
+for (let x in obj) {
+  console.log(x);
+  console.log(obj[x]);
+}
+
+console.log("________________");
+
+const person = {fName: "John", lName: "Krasinski", age: 32, location: "Vancouver"};
+
+for (let x in person) {
+  // console.log("↓" + x + "↓");
+  // console.log(person[x]);
+  console.log(x + ": " + person[x]);
+}
+
+
+console.log("=========================================");
