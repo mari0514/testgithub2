@@ -130,7 +130,7 @@ for (let x in obj) {
 
 console.log("________________");
 
-const person = {fName: "John", lName: "Krasinski", age: 32, location: "Vancouver"};
+const person = {fName: "John", lName: "Krasinski", age: 42, location: "Boston", isMale: true};
 
 for (let x in person) {
   // console.log("↓" + x + "↓");
@@ -140,3 +140,28 @@ for (let x in person) {
 
 
 console.log("=========================================");
+
+// another for
+
+let newArr = [
+  {
+    name: "Jane",
+    lastname: "Doe",
+  },
+  {
+    name: "Chris",
+    lastname: "Doe",
+  },
+];
+
+for (let x of newArr) {
+  console.log(x); //elements
+}
+
+for (let x = 0; x < newArr.length; x++) {
+  console.log(newArr[x]);
+}
+
+
+console.log("=========================================");
+
