@@ -165,3 +165,128 @@ for (let x = 0; x < newArr.length; x++) {
 
 console.log("=========================================");
 
+let greeting = "Hello World!";
+
+for (let x of greeting) {
+  console.log(x);
+}
+
+console.log("  ");
+
+for (let x = 0; x < greeting.length; x++) {
+  console.log(greeting[x]);
+}
+
+console.log("=========================================");
+
+let arr2 = [
+  {
+    name: "Tom",
+    lastname: "Holland",
+    location: "Kingston",
+  },
+  {
+    name: "Tobey",
+    lastname: "Maguire",
+    location: "Boston",
+  },
+  {
+    name: "Andrew",
+    lastname: "Garfield",
+    location: "Los Angeles",
+  }, 
+  3,
+  "Spider-Man",
+];
+
+for (let a of arr2) {
+  console.log(a);
+}
+
+for (let a of arr2) {
+  if (typeof a === "object") {
+    console.log("This is an object.");
+  } else if (typeof a === "string") {
+    console.log("This is a string.");
+  } else {
+    console.log("This is not an object and a string.");
+  }
+}
+
+console.log("=========================================");
+
+const arr3 = [
+  "Hello",
+  "Al",
+  "Mari",
+  "Dwayne",
+]
+
+for (let i of arr3) {
+  // console.log(i);
+  if (i == "Hello" || i == "Mari") {
+    console.log(i);
+  }
+}
+
+console.log("=========================================");
+
+// while
+let i = 0;
+let text;
+
+while (i <= 10) {
+  console.log(i);
+  // text += "The number is " + i + " ";
+  i++;
+}
+
+// console.log(text);
+
+console.log("=========================================");
+
+// Do ..while
+/*
+do {
+
+}
+while (condition)
+*/
+let m = 0;
+
+do {
+  console.log(m);
+  m++;
+}
+while (m < 5) 
+
+console.log("=========================================");
+
+const cars = ["BMW", "Mercedez", "Porche", "Volvo"];
+
+// for (let p = 0; p < cars.length; p++) {
+//   console.log(cars[p]);
+// }
+
+let p = 0;
+while (cars[p]) {
+  console.log(cars[p]);
+  p++;
+}
+
+console.log("=========================================");
+
+// continue, break
+for (let q = 0; q < 10; q++) {
+  if (q === 3 ) {
+    continue; //skips 3
+  } 
+  console.log(q);
+}
+
+
+console.log("=========================================");
+
+let n = "mari";
+let restOfTheName = n.slice(1);
+console.log(n[0].toUpperCase() + restOfTheName);
