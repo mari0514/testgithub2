@@ -138,3 +138,59 @@ var newHotel = {
 }
 
 console.log(newHotel.checkKitchenAvailability(true));
+console.log(newHotel.name);
+var checkPoolAvailability = function() {
+  if (newHotel.pool === true) {
+    return "Pool is available at New Hotel.";
+  } else {
+    return "Pool is not available at New Hotel."
+  }
+}
+console.log(checkPoolAvailability());
+
+
+
+var ottawaHotel = new Object(); //var ottawaHotel = ();
+
+ottawaHotel.name = "Ottawa Hotel";
+ottawaHotel.rooms = 50;
+ottawaHotel.booked = 38;
+ottawaHotel.checkAvailabilityOfOttawa = function() {
+  return (ottawaHotel.rooms - ottawaHotel.booked) + " rooms available";
+};
+console.log(ottawaHotel.name);
+console.log(ottawaHotel.checkAvailabilityOfOttawa());
+
+
+
+
+var width = 400;
+function getWidth() {
+  console.log("Width: " + width);
+}
+
+getWidth();
+
+
+var arr = [0, 1, 2, 3];
+
+var Obj = {
+  first: 0,
+  seconf: 1,
+  third: 2,
+  fourth: 3,
+}
+
+console.log(Obj);
+
+
+// string object
+let hi = "  kam dela op bh";
+// console.log(hi.length);
+// console.log(hi.toUpperCase());
+// console.log(hi.indexOf("h"));
+// console.log(hi.indexOf("b"));
+// console.log(hi.substring(4));
+// console.log(hi.split(" ")[1]);
+console.log(hi);
+console.log(hi.trim());
