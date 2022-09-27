@@ -106,3 +106,26 @@ logAtMost5(8);
 // space complexity
 // Most primitives(number, boolean, undefined, null) are constant
 
+
+console.log("_____ binary search _____");
+// binary search
+let array = [0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 14, 15, 24, 35, 53, 60, 65, 74, 89, 92];
+
+function binarySearch(arr, target) {
+  let start = 0;
+  let end = arr.length - 1;
+  while (start <= end) {
+    let middle = Math.floor((start + end) / 2);
+    if(arr[middle] === target) {
+      return middle;
+    } else if (arr[middle] < target) {
+      start = middle + 1;
+    } else {
+      end = middle - 1;
+    }
+  }
+  return `${target} can't be found in the array.`
+}
+
+console.log(binarySearch(array, 24));
+console.log(binarySearch(array, 13));
