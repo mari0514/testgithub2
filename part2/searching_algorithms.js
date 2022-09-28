@@ -1,3 +1,5 @@
+// Sep. 27
+
 // linear search <= O(n) <= linear time
 // if the amount of the elements is n, the average of the process takes n/2 times
 // if n = 1000, it takes 500 times to find the element thet you're looking for
