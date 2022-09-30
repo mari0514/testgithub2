@@ -98,7 +98,7 @@ function selectionSort2(arr) {
 
 console.log(selectionSort2(array));
 
-
+console.log("____________________");
 
 // Insertion sort algorithm
 
@@ -120,3 +120,100 @@ function insertionSort(arr)  {
 
 console.log(insertionSort(array));
 
+
+
+console.log("____________________");
+// merge sort
+// time complexity: O(n log(n))
+// space complexity: O(n)
+console.log("Merge sort");
+
+function merge(left, right) {
+  const result = [];
+
+  while (left.length && right.length) {
+    if (left[0] <= right[0]) {
+      result.push(left.shift());
+    } else {
+      result.push(right.shift());
+    }
+  }
+
+  while (left.length) {
+    result.push(left.shift());
+  }
+  while (right.length) {
+    result.push(right.shift());
+  }
+
+  return result;
+
+}
+
+function mergeSort(arr) {
+  const half = arr.length / 2;
+
+  if (arr.length < 2) {
+    return arr;
+  }
+
+  const left = arr.splice(0, half); 
+  const right = arr;
+  return merge(mergeSort(left), mergeSort(right));
+}
+
+console.log(mergeSort([4, 1, 3, 6, 5, 8, 2, 9, 0, 1]));
+console.log(mergeSort([7, 12, 9, 4, 8, 2, 19, 14, 3, 15, 17, 5, 6, 1, 20, 16, 0, 18]));
+
+console.log("____________________");
+
+
+// Quick sort
+// Time complexity: O(log(n)) or O(n^2) when worst
+// Space complexity: O(log(n))
+console.log("quick sort");
+
+
+function swap(items, leftIndex, rightIndex){
+  var temp = items[leftIndex];
+  items[leftIndex] = items[rightIndex];
+  items[rightIndex] = temp;
+}
+
+function partition(items, left, right) {
+  var pivot   = items[Math.floor((right + left) / 2)], //middle element
+      i       = left, //left pointer
+      j       = right; //right pointer
+  while (i <= j) {
+      while (items[i] < pivot) {
+          i++;
+      }
+      while (items[j] > pivot) {
+          j--;
+      }
+      if (i <= j) {
+          swap(items, i, j); //swap two elements
+          i++;
+          j--;
+      }
+  }
+  return i;
+}
+
+function quickSort(items, left, right) {
+  var index;
+  if (items.length > 1) {
+      index = partition(items, left, right); //index returned from partition
+      if (left < index - 1) { //more elements on the left side of the pivot
+          quickSort(items, left, index - 1);
+      }
+      if (index < right) { //more elements on the right side of the pivot
+          quickSort(items, index, right);
+      }
+  }
+  return items;
+}
+
+var items = [6, 12, 2, 20, 18, 3, 14, 10, 7, 5, 13, 8, 16, 9, 4, 1, 5, 0];
+var sortedArray = quickSort(items, 0, items.length - 1);
+console.log(sortedArray);

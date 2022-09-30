@@ -69,3 +69,27 @@ console.log(factorial(4));
 console.log(factorial(5));
 
 console.log("____________________");
+
+
+function countdown(n){
+  let array = [];
+  if (n <= 0) {
+    array = [];
+    return array;
+  } else {
+    array = array.push(n-1);
+    return array;
+  }
+}
+console.log(countdown(4));
+
+
+const myFunc = str => {
+  if (str.length > 1) {
+    return myFunc(str.slice(1));
+  }
+
+  return str;
+};
+
+console.log(myFunc('Hello world'));
