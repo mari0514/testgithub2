@@ -93,3 +93,58 @@ const myFunc = str => {
 };
 
 console.log(myFunc('Hello world'));
+
+
+
+// ternary operator　三項演算子
+function whichDrink(x) {
+  const age = x;
+  const drink = age >= 20 ? "Beer" : "Orange Juice";
+  return "Your drink is " + drink;
+}
+
+console.log(whichDrink(20));
+console.log(whichDrink(24));
+console.log(whichDrink(18));
+
+
+function extension(ext) {
+  const language = 
+    ext === "js" ? "JavaScript" :
+    ext === "ts" ? "TypeScript" :
+    ext === "java" ? "Java" :
+    "Unknown";
+  return "\"" + ext + "\"" + " is equal to " + language;
+}
+
+console.log(extension("js"));
+console.log(extension("ts"));
+console.log(extension("java"));
+
+
+
+console.log('+++');
+
+var obj = {
+  name: 'Bob',
+  age: 30,
+  defineThis: function() {
+    function a() {
+      console.log(this === obj);
+    }
+    a()
+  },
+}
+obj.defineThis();
+
+
+function onlyElementAtEvenIndex(array) {
+  var newArray = Array(Math.ceil(array.length / 2));
+  for (var i = 0; i < array.length; i++) {
+    if (i % 2 === 0) {
+      newArray[i / 2] = array[i];
+    }
+  }
+  return newArray;
+}
+console.log(onlyElementAtEvenIndex([0, 1, 2, 3, 4, 5, 6]));
